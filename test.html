@@ -13,5 +13,11 @@
 </head>
 <body>
   <div class="base64-bg"></div>
+  <button id="sendBtn">傳送字串給 App</button>
+  <script>
+    document.getElementById("sendBtn").addEventListener("click", function () {
+      window.webkit.messageHandlers.iosHandler.postMessage("hello from web");
+    });
+  </script>
 </body>
 </html>
